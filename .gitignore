@@ -1,0 +1,10 @@
+# dependencies (dev-only screenshot tooling)
+node_modules/
+
+# raw/unoptimized source downloads + one-off scripts used to curate assets/images
+_source_images/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
