@@ -525,7 +525,8 @@ window.MG_BOATS = {
   "gallery": [
    "assets/images/boats/capelli1000wa/00.jpg",
    "assets/images/boats/capelli1000wa/01.jpg",
-   "assets/images/boats/capelli1000wa/02.jpg"
+   "assets/images/boats/capelli1000wa/02.jpg",
+   "assets/images/boats/capelli1000wa/03.jpg"
   ],
   "seasons": {
    "basse": 780,
@@ -1494,7 +1495,8 @@ window.MG_BOATS = {
    "assets/images/boats/s_protagon20/00.jpg",
    "assets/images/boats/s_protagon20/01.jpg",
    "assets/images/boats/s_protagon20/02.jpg",
-   "assets/images/boats/s_protagon20/03.jpg"
+   "assets/images/boats/s_protagon20/03.jpg",
+   "assets/images/boats/s_protagon20/04.jpg"
   ],
   "specsheet": {
    "Longueur": "5m95",
@@ -1540,7 +1542,8 @@ window.MG_BOATS = {
   "tag": "",
   "blurb": "Center console de 8 m, design épuré et grande habitabilité.",
   "gallery": [
-   "assets/images/boats/s_protagon25/00.jpg"
+   "assets/images/boats/s_protagon25/00.jpg",
+   "assets/images/boats/s_protagon25/01.jpg"
   ],
   "specsheet": {
    "Longueur": "8m00",
@@ -1714,7 +1717,8 @@ window.MG_BOATS = {
    "assets/images/boats/s_selva560/00.jpg",
    "assets/images/boats/s_selva560/01.jpg",
    "assets/images/boats/s_selva560/02.jpg",
-   "assets/images/boats/s_selva560/03.jpg"
+   "assets/images/boats/s_selva560/03.jpg",
+   "assets/images/boats/s_selva560/04.jpg"
   ],
   "specsheet": {
    "Longueur": "5m60",
@@ -1854,7 +1858,8 @@ window.MG_BOATS = {
    "assets/images/boats/s_selva665/00.jpg",
    "assets/images/boats/s_selva665/01.jpg",
    "assets/images/boats/s_selva665/02.jpg",
-   "assets/images/boats/s_selva665/03.jpg"
+   "assets/images/boats/s_selva665/03.jpg",
+   "assets/images/boats/s_selva665/04.jpg"
   ],
   "specsheet": {
    "Longueur": "6m70",
@@ -2109,8 +2114,7 @@ window.MG_BOATS = {
   "gallery": [
    "assets/images/boats/s_selva700/00.jpg",
    "assets/images/boats/s_selva700/01.jpg",
-   "assets/images/boats/s_selva700/02.jpg",
-   "assets/images/boats/s_selva700/03.jpg"
+   "assets/images/boats/s_selva700/02.jpg"
   ],
   "specsheet": {
    "Longueur": "6m99",
