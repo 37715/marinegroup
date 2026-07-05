@@ -203,7 +203,17 @@ strong { font-weight: 700; }
 .section--deeper { background: var(--marine-2); }
 .section--abyss { background: var(--abysse); }
 
-/* ---- Vente ---- */
+/* ---- Vente (light catalogue) ---- */
+.vente { background: var(--ecume); }
+.fleet-grid--sales .boat__media { background: #ffffff; }
+.fleet-grid--sales .boat__media img { object-fit: contain; padding: 0.4rem; }
+.boat__price em { font-family: var(--font-mono); font-style: normal; font-size: 0.66rem; color: var(--ink-soft); letter-spacing: 0.06em; margin-right: 0.15rem; }
+.boat--sold { opacity: 0.72; }
+.boat--sold .boat__media img { filter: grayscale(0.75); }
+.boat__tag--sold { color: var(--ink-soft); border-color: var(--line-dark); }
+.vente__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 2rem; margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+
+/* ---- Vente (legacy brand blocks, unused) ---- */
 .brands { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 1rem; }
 .brand { padding: 1.8rem clamp(1rem, 2vw, 1.8rem) 1.8rem 0; border-top: 1px solid var(--line-light); }
 .brand h3 { color: var(--light); font-size: clamp(1.5rem, 2.6vw, 2rem); font-weight: 500; margin-bottom: 0.5rem; }

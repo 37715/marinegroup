@@ -75,24 +75,21 @@
     );
   }
 
-  /* ---- Fleet filter tabs ---- */
-  const filters = document.querySelectorAll(".filter");
-  const boats = document.querySelectorAll(".boat");
-  if (filters.length && boats.length) {
-    filters.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const cat = btn.dataset.filter;
-        filters.forEach((f) => {
-          const active = f === btn;
-          f.classList.toggle("is-active", active);
-          f.setAttribute("aria-selected", String(active));
-        });
-        boats.forEach((b) => {
-          b.classList.toggle("is-hidden", cat !== "all" && b.dataset.cat !== cat);
-        });
+  /* ---- Filter tabs (scoped per section: fleet & sales are independent) ---- */
+  document.querySelectorAll(".filter").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const scope = btn.closest("section") || document;
+      const cat = btn.dataset.filter;
+      scope.querySelectorAll(".filter").forEach((f) => {
+        const active = f === btn;
+        f.classList.toggle("is-active", active);
+        f.setAttribute("aria-selected", String(active));
+      });
+      scope.querySelectorAll(".boat").forEach((b) => {
+        b.classList.toggle("is-hidden", cat !== "all" && b.dataset.cat !== cat);
       });
     });
-  }
+  });
 
   /* ---- Contact form: open the visitor's mail client (no backend) ---- */
   const form = document.getElementById("contactForm");
