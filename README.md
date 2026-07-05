@@ -1,27 +1,36 @@
 # Marine Group — Porto-Vecchio
 
 A new website for **Marine Group**, a three-generation nautical company in Porto-Vecchio, Corsica
-(boat sales, rental, shipyard / *chantier naval*, and private marina).
+— luxury boat & yacht **rental**, **sales** (neuf & occasion), **shipyard** (*chantier naval*),
+and a **private marina**.
 
-The design — *"Au fil de l'eau"* — takes its cues from the company's own aerial photography:
-crystalline Corsican turquoise, teak decks, granite coastline. As you scroll, the page
-**descends through the water**, from pale seafoam at the top to deep abyss-teal at the bottom.
+The design is deliberately *quiet luxury*: restrained typography, generous space, and the
+company's own aerial photography of crystalline Corsican turquoise doing the talking. Teak/brass
+is the only warm accent; turquoise is reserved for the water, never the UI.
 
 ## Stack
 
-Plain, dependency-free **static site** — just HTML, CSS and a little vanilla JavaScript.
-Fast, hosts anywhere (Netlify, Vercel, GitHub Pages, OVH, a plain web server), nothing to build.
+Plain, dependency-free **static site** — HTML, CSS and a little vanilla JavaScript.
+Fast, hosts anywhere (Netlify, Vercel, GitHub Pages, OVH, any web server), nothing to build.
 
 ```
-index.html      → markup & copy (French)
-styles.css      → design system, layout, the "descent" gradient, responsive rules
-main.js         → nav state, mobile menu, scroll reveals, hero parallax
-assets/images/  → optimized photography, brand logos, favicon
+index.html                     → single-page site: hero, fleet, history, sales, shipyard, marina, events, contact
+mentions-legales.html          → legal notice
+politique-confidentialite.html → privacy policy (RGPD)
+styles.css                     → design system, layout, responsive rules
+main.js                        → nav state, mobile menu, scroll reveals, fleet filter, contact form
+assets/images/                 → optimized photography (+ assets/images/fleet/ per-model shots)
 ```
+
+## The fleet
+
+The rental fleet is the centrepiece, near the top of the page, with a category filter
+(Semi-rigides / Day cruisers / Vedettes / Yachts). Each boat has its own photo, specs
+(length · guests · power) and day rate, mirroring the real listings on marinegroup.fr.
 
 ## Run locally
 
-Any static server works. For example:
+Any static server works:
 
 ```bash
 python -m http.server 8000
@@ -32,33 +41,36 @@ Or just open `index.html` in a browser.
 
 ## Design system
 
-| Token   | Hex       | Role                                  |
-| ------- | --------- | ------------------------------------- |
-| Abysse  | `#08252B` | deep teal ink — text, deepest section |
-| Marine  | `#0F3B47` | marine navy                           |
-| Lagon   | `#1CA3B5` | signature turquoise — accents, CTAs   |
-| Écume   | `#F1F7F6` | pale seafoam — light background       |
-| Teck    | `#C7A16A` | warm teak accent — used sparingly     |
+| Token   | Hex       | Role                                        |
+| ------- | --------- | ------------------------------------------- |
+| Abysse  | `#08252B` | deep teal ink — text, deepest sections      |
+| Marine  | `#0F3B47` | marine navy — sales / shipyard backgrounds  |
+| Lagon   | `#1CA3B5` | Corsican turquoise — the water only         |
+| Écume   | `#F3F8F7` | pale seafoam — light backgrounds            |
+| Teck    | `#C7A16A` | warm teak/brass — the single UI accent      |
 
-- **Display:** Cabinet Grotesk · **Body:** Satoshi (both via Fontshare) · **Labels:** IBM Plex Mono (Google Fonts)
+- **Headings & body:** Satoshi (Fontshare), used at light weights for a minimal, editorial feel.
+- **Data & labels:** IBM Plex Mono (Google Fonts) — specs, prices, coordinates, eyebrows.
 - Fonts load from CDNs; no local font files required.
+
+## The contact form
+
+The enquiry form is backend-free: on submit it opens the visitor's mail client with a
+pre-filled message to `marinegroup2a@gmail.com`. To use a hosted form service instead
+(e.g. Formspree), swap the submit handler in `main.js`.
 
 ## Editing content
 
-All copy lives directly in `index.html` in readable French. Common edits:
+All copy lives in `index.html` in readable French. Common edits:
 
-- **Phone number:** search for `+33632866788` (the `tel:` link) and `06 32 86 67 88` (display).
-- **Address / email:** in the `footer` section.
-- **Images:** drop replacements into `assets/images/` keeping the same filename, or update the `src`.
-  Keep photos wide and high-resolution; they are the heart of the design.
+- **Phone:** search `+33632866788` (`tel:` link) and `06 32 86 67 88` (display).
+- **Fleet:** each boat is an `<article class="boat" data-cat="…">` block — edit name, specs, price, image.
+- **Address / email:** in the `#contact` section and the footer.
+- **Images:** drop replacements into `assets/images/` (or `assets/images/fleet/`) keeping the same filename.
 
-## Images
-
-Photography and brand logos are the company's own assets, sourced from the existing
-marinegroup.fr site and the [@marinegroup.portovecchio](https://www.instagram.com/marinegroup.portovecchio/)
-Instagram, then resized and compressed for the web.
+> Legal pages contain placeholders marked *à compléter* (SIRET, hébergeur, etc.) for the owner to fill in.
 
 ## Dev tooling (optional)
 
-`package.json` includes `playwright-core`, used only to render review screenshots
-(`_source_images/shoot.js`). It is **not** required to run or deploy the site.
+Image optimization (`_source_images/optimize*.py`, Pillow) and review screenshots
+(`_source_images/shoot.js`, playwright-core) are **not** required to run or deploy the site.

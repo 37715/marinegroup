@@ -67,11 +67,57 @@
         ticking = true;
         requestAnimationFrame(() => {
           const y = Math.min(window.scrollY, window.innerHeight);
-          heroImg.style.transform = "translateY(" + y * 0.06 + "px) scale(1.14)";
+          heroImg.style.transform = "translateY(" + y * 0.04 + "px) scale(1.06)";
           ticking = false;
         });
       },
       { passive: true }
     );
+  }
+
+  /* ---- Fleet filter tabs ---- */
+  const filters = document.querySelectorAll(".filter");
+  const boats = document.querySelectorAll(".boat");
+  if (filters.length && boats.length) {
+    filters.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const cat = btn.dataset.filter;
+        filters.forEach((f) => {
+          const active = f === btn;
+          f.classList.toggle("is-active", active);
+          f.setAttribute("aria-selected", String(active));
+        });
+        boats.forEach((b) => {
+          b.classList.toggle("is-hidden", cat !== "all" && b.dataset.cat !== cat);
+        });
+      });
+    });
+  }
+
+  /* ---- Contact form: open the visitor's mail client (no backend) ---- */
+  const form = document.getElementById("contactForm");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const get = (n) => (form.querySelector('[name="' + n + '"]') || {}).value || "";
+      const name = get("name").trim();
+      const email = get("email").trim();
+      if (!name || !email) {
+        form.reportValidity();
+        return;
+      }
+      const subject = "Demande — " + get("subject");
+      const body =
+        "Nom : " + name + "\n" +
+        "Email : " + email + "\n" +
+        "Téléphone : " + get("phone") + "\n" +
+        "Sujet : " + get("subject") + "\n\n" +
+        get("message");
+      window.location.href =
+        "mailto:marinegroup2a@gmail.com?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+    });
   }
 })();

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marine Group — Porto-Vecchio · Vente, location & chantier naval depuis 1960</title>
-  <meta name="description" content="Trois générations de passionnés au service de votre plaisir nautique à Porto-Vecchio. Vente de bateaux neufs et d'occasion, location, chantier naval et marina privée au cœur du golfe corse." />
+  <title>Marine Group — Location de yachts & bateaux à Porto-Vecchio · Depuis 1960</title>
+  <meta name="description" content="Location de bateaux et yachts d'exception à Porto-Vecchio, de 5 à 24 mètres, avec ou sans skipper. Vente neuf & occasion, chantier naval et marina privée. Trois générations au service de la mer depuis 1960." />
   <meta name="theme-color" content="#08252B" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Marine Group — Porto-Vecchio" />
-  <meta property="og:description" content="Vente, location, chantier naval & marina privée au cœur du golfe de Porto-Vecchio. Depuis 1960." />
+  <meta property="og:description" content="Location de yachts & bateaux d'exception, vente, chantier naval et marina privée au cœur du golfe de Porto-Vecchio. Depuis 1960." />
   <meta property="og:image" content="assets/images/hero.jpg" />
   <meta property="og:locale" content="fr_FR" />
 
@@ -19,13 +19,13 @@
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#flotte">Aller au contenu</a>
+  <a class="skip-link" href="#flotte">Aller à la flotte</a>
 
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
@@ -34,14 +34,15 @@
         <img src="assets/images/logo.png" alt="Marine Group" class="nav__logo" />
       </a>
       <nav class="nav__links" aria-label="Navigation principale">
-        <a href="#heritage">Héritage</a>
-        <a href="#univers">Univers</a>
         <a href="#flotte">La flotte</a>
+        <a href="#histoire">Histoire</a>
+        <a href="#vente">Vente</a>
         <a href="#chantier">Chantier naval</a>
-        <a href="#lieu">Porto-Vecchio</a>
+        <a href="#marina">Marina</a>
+        <a href="#contact">Contact</a>
       </nav>
       <a class="nav__cta" href="tel:+33632866788">
-        <span class="nav__cta-label">Réserver</span>
+        <span class="nav__cta-label">Réservations</span>
         <span class="nav__cta-num">06 32 86 67 88</span>
       </a>
       <button class="nav__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -49,11 +50,12 @@
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu" hidden>
-      <a href="#heritage">Héritage</a>
-      <a href="#univers">Univers</a>
       <a href="#flotte">La flotte</a>
+      <a href="#histoire">Histoire</a>
+      <a href="#vente">Vente</a>
       <a href="#chantier">Chantier naval</a>
-      <a href="#lieu">Porto-Vecchio</a>
+      <a href="#marina">Marina privée</a>
+      <a href="#evenements">Actualités</a>
       <a href="#contact">Contact</a>
       <a class="mobile-menu__tel" href="tel:+33632866788">06 32 86 67 88</a>
     </div>
@@ -63,152 +65,229 @@
     <!-- ============ HERO ============ -->
     <section class="hero" id="hero">
       <div class="hero__media">
-        <img src="assets/images/hero.jpg" alt="Vue aérienne d'un day cruiser sur les eaux turquoise du golfe de Porto-Vecchio" />
+        <img src="assets/images/hero.jpg" alt="Yacht Princess amarré sur les eaux turquoise du golfe de Porto-Vecchio" fetchpriority="high" />
       </div>
       <div class="hero__scrim"></div>
       <div class="hero__content">
-        <p class="eyebrow eyebrow--light" data-reveal>Porto-Vecchio · Corse-du-Sud</p>
-        <h1 class="hero__title">
-          <span data-reveal>Au fil de l'eau,</span>
-          <span data-reveal data-reveal-delay="1">depuis 1960.</span>
-        </h1>
+        <p class="eyebrow eyebrow--light" data-reveal>Location · Vente · Chantier naval — Porto-Vecchio</p>
+        <h1 class="hero__title" data-reveal data-reveal-delay="1">La Méditerranée,<br />à votre mesure.</h1>
         <p class="hero__lede" data-reveal data-reveal-delay="2">
-          Trois générations de passionnés au service de votre plaisir nautique — vente,
-          location, chantier naval et marina privée, au cœur du golfe le plus limpide de Corse.
+          Plus de vingt bateaux d'exception, du semi-rigide au yacht de 24 mètres,
+          avec ou sans skipper. Trois générations au service de la mer, au cœur du
+          golfe le plus limpide de Corse.
         </p>
         <div class="hero__actions" data-reveal data-reveal-delay="3">
           <a class="btn btn--solid" href="#flotte">Découvrir la flotte</a>
-          <a class="btn btn--ghost" href="#contact">Nous contacter</a>
+          <a class="btn btn--ghost" href="#contact">Réserver</a>
         </div>
       </div>
       <div class="hero__meta">
+        <span class="mono">Depuis 1960</span>
         <span class="mono">41°35′N&nbsp;&nbsp;9°17′E</span>
-        <span class="hero__scroll" aria-hidden="true">
-          <span class="hero__scroll-line"></span>Faites défiler
-        </span>
-        <span class="mono">Quai Pascal Paoli</span>
       </div>
     </section>
 
-    <!-- ============ HÉRITAGE ============ -->
-    <section class="heritage section" id="heritage">
-      <div class="wrap heritage__grid">
-        <div class="heritage__text">
-          <p class="eyebrow" data-reveal>L'héritage</p>
-          <h2 class="h-display" data-reveal>Une histoire de famille,<br />écrite sur l'eau.</h2>
+    <!-- ============ FLOTTE (rental fleet — prominent) ============ -->
+    <section class="flotte section" id="flotte">
+      <div class="wrap">
+        <header class="section-head flotte__head">
+          <div>
+            <p class="eyebrow" data-reveal>La flotte à la location</p>
+            <h2 class="h-display" data-reveal>Vingt bateaux,<br />une même exigence.</h2>
+          </div>
           <p class="lead" data-reveal>
-            Tout a commencé sur un terre-plein de Porto-Vecchio, avec quelques coques
-            en bois et une ancre plantée en bord de route. Soixante ans plus tard, la
-            même famille veille toujours sur les bateaux du golfe.
+            Du semi-rigide agile au yacht de croisière, choisissez votre bateau pour la
+            journée — avec ou sans skipper. Tarifs à la journée, TVA incluse.
           </p>
-          <p data-reveal>
-            De la vente à l'entretien, de la première sortie en mer à l'hivernage,
-            nous accompagnons armateurs et plaisanciers avec la précision d'un métier
-            transmis de père en fils — et l'exigence que mérite la Méditerranée.
-          </p>
-          <dl class="facts" data-reveal>
-            <div><dt class="mono">Depuis</dt><dd>1960</dd></div>
-            <div><dt class="mono">Générations</dt><dd>Trois</dd></div>
-            <div><dt class="mono">Flotte</dt><dd>5 → 24 m</dd></div>
-          </dl>
+        </header>
+
+        <div class="filters" role="tablist" aria-label="Filtrer la flotte" data-reveal>
+          <button class="filter is-active" role="tab" aria-selected="true" data-filter="all">Tous</button>
+          <button class="filter" role="tab" aria-selected="false" data-filter="semi">Semi-rigides</button>
+          <button class="filter" role="tab" aria-selected="false" data-filter="day">Day cruisers</button>
+          <button class="filter" role="tab" aria-selected="false" data-filter="vedette">Vedettes</button>
+          <button class="filter" role="tab" aria-selected="false" data-filter="yacht">Yachts</button>
         </div>
-        <figure class="heritage__figure" data-reveal>
-          <img src="assets/images/heritage-vintage.jpg" alt="Le premier chantier Marine Group à Porto-Vecchio dans les années 1960" />
-          <figcaption class="mono">Le premier chantier — Porto-Vecchio, c. 1960</figcaption>
+
+        <div class="fleet-grid" id="fleetGrid">
+          <!-- Semi-rigides -->
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/marlin182.jpg" alt="Marlin 182" loading="lazy" /></div>
+            <div class="boat__row"><h3>Marlin 182</h3><span class="boat__price">290 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">5,55 m · 6 pers. · 115 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/asso62.jpg" alt="Asso 62" loading="lazy" /></div>
+            <div class="boat__row"><h3>Asso 62</h3><span class="boat__price">405 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">6,20 m · 10 pers. · 150 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/capelli626.jpg" alt="Capelli 626" loading="lazy" /></div>
+            <div class="boat__row"><h3>Capelli 626</h3><span class="boat__price">360 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">6,26 m · 10 pers. · 150 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/marlin226.jpg" alt="Marlin 226" loading="lazy" /></div>
+            <div class="boat__row"><h3>Marlin 226</h3><span class="boat__price">450 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">6,90 m · 10 pers. · 175 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/marlin24sr.jpg" alt="Marlin 24 SR" loading="lazy" /></div>
+            <div class="boat__row"><h3>Marlin 24 SR <span class="boat__tag">Refit 2025</span></h3><span class="boat__price">585 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">7,40 m · 12 pers. · 250 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/marlin24sr.jpg" alt="Marlin 24 SR" loading="lazy" /></div>
+            <div class="boat__row"><h3>Marlin 24 SR <span class="boat__tag">2023</span></h3><span class="boat__price">585 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">7,40 m · 12 pers. · 250 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/bsc78.jpg" alt="BSC 78" loading="lazy" /></div>
+            <div class="boat__row"><h3>BSC 78</h3><span class="boat__price">630 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">7,90 m · 12 pers. · 300 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/marlin274.jpg" alt="Marlin 274" loading="lazy" /></div>
+            <div class="boat__row"><h3>Marlin 274 <span class="boat__tag">Refit 2024</span></h3><span class="boat__price">675 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">8,35 m · 12 pers. · 350 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/marlin298.jpg" alt="Marlin 298" loading="lazy" /></div>
+            <div class="boat__row"><h3>Marlin 298</h3><span class="boat__price">810 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">9,15 m · 12 pers. · 400 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/capelli900.jpg" alt="Capelli 900 WA" loading="lazy" /></div>
+            <div class="boat__row"><h3>Capelli 900 WA</h3><span class="boat__price">810 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">9,30 m · 12 pers. · 500 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/capelli1000.jpg" alt="Capelli 1000 SUN" loading="lazy" /></div>
+            <div class="boat__row"><h3>Capelli 1000 SUN</h3><span class="boat__price">900 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">10,00 m · 12 pers. · 500 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/capelli1000.jpg" alt="Capelli 1000 WA" loading="lazy" /></div>
+            <div class="boat__row"><h3>Capelli 1000 WA</h3><span class="boat__price">900 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">10,00 m · 12 pers. · 500 CV</p>
+          </article>
+          <article class="boat" data-cat="semi" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/marlin38.jpg" alt="Marlin 38" loading="lazy" /></div>
+            <div class="boat__row"><h3>Marlin 38 <span class="boat__tag">Refit 2024</span></h3><span class="boat__price">1 080 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">12,00 m · 12 pers. · 700 CV</p>
+          </article>
+
+          <!-- Day cruisers -->
+          <article class="boat" data-cat="day" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/flyer66.jpg" alt="Beneteau Flyer 6.6" loading="lazy" /></div>
+            <div class="boat__row"><h3>Beneteau Flyer 6.6</h3><span class="boat__price">405 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">6,60 m · 6 pers. · 200 CV</p>
+          </article>
+          <article class="boat" data-cat="day" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/protagon25.jpg" alt="Protagon 25" loading="lazy" /></div>
+            <div class="boat__row"><h3>Protagon 25</h3><span class="boat__price">675 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">8,00 m · 12 pers. · 250 CV</p>
+          </article>
+          <article class="boat" data-cat="day" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/axopar29.jpg" alt="Axopar 29 Sun Top" loading="lazy" /></div>
+            <div class="boat__row"><h3>Axopar 29 Sun Top</h3><span class="boat__price">950 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">9,40 m · 9 pers. · 400 CV</p>
+          </article>
+
+          <!-- Vedettes -->
+          <article class="boat" data-cat="vedette" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/fjord44.jpg" alt="Fjord 44 Open" loading="lazy" /></div>
+            <div class="boat__row"><h3>Fjord 44 Open</h3><span class="boat__price">2 500 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">12,50 m · 8 pers. · 900 CV</p>
+          </article>
+
+          <!-- Yachts -->
+          <article class="boat" data-cat="yacht" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/princessv58.jpg" alt="Princess V58 HT" loading="lazy" /></div>
+            <div class="boat__row"><h3>Princess V58 HT</h3><span class="boat__price">3 350 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">18,50 m · 10 pers. · 2 × 800 CV</p>
+          </article>
+          <article class="boat" data-cat="yacht" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/princess61.jpg" alt="Princess 61 Fly" loading="lazy" /></div>
+            <div class="boat__row"><h3>Princess 61 Fly</h3><span class="boat__price">3 550 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">19,00 m · 12 pers. · 2 × 800 CV</p>
+          </article>
+          <article class="boat" data-cat="yacht" data-reveal>
+            <div class="boat__media"><img src="assets/images/fleet/mangusta80.jpg" alt="Mangusta 80" loading="lazy" /></div>
+            <div class="boat__row"><h3>Mangusta 80</h3><span class="boat__price">5 940 €<em>/jour</em></span></div>
+            <p class="boat__spec mono">24,00 m · 10 pers. · 2 × 750 CV</p>
+          </article>
+        </div>
+
+        <p class="flotte__note mono" data-reveal>
+          Skipper, carburant &amp; extras sur demande — réservez au
+          <a href="tel:+33632866788">06 32 86 67 88</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ HISTOIRE ============ -->
+    <section class="histoire section" id="histoire">
+      <div class="wrap histoire__grid">
+        <figure class="histoire__figure" data-reveal>
+          <img src="assets/images/heritage-vintage.jpg" alt="Le premier chantier de la famille Raffin à Porto-Vecchio dans les années 1960" loading="lazy" />
+          <figcaption class="mono">Le premier chantier — Porto-Vecchio, années 1960</figcaption>
         </figure>
-      </div>
-    </section>
-
-    <!-- ============ UNIVERS / SERVICES ============ -->
-    <section class="univers section" id="univers">
-      <div class="wrap">
-        <header class="section-head">
-          <p class="eyebrow" data-reveal>Nos univers</p>
-          <h2 class="h-display" data-reveal>Tout ce que la mer exige,<br />sous un même pavillon.</h2>
-        </header>
-        <div class="univers__grid">
-          <article class="ucard ucard--wide" data-reveal>
-            <div class="ucard__media"><img src="assets/images/yacht-princess.jpg" alt="Yacht de sport amarré sur une eau turquoise" loading="lazy" /></div>
-            <div class="ucard__body">
-              <span class="mono ucard__tag">Vente</span>
-              <h3>Neuf &amp; occasion</h3>
-              <p>Bateaux neufs Marlin, Rand, Selva et Protagon, moteurs Suzuki, ainsi qu'une sélection d'occasions rigoureusement contrôlées.</p>
-            </div>
-          </article>
-          <article class="ucard" data-reveal data-reveal-delay="1">
-            <div class="ucard__media"><img src="assets/images/fleet-orange.jpg" alt="Semi-rigide vu du ciel sur un fond marin turquoise" loading="lazy" /></div>
-            <div class="ucard__body">
-              <span class="mono ucard__tag">Location</span>
-              <h3>Louer une journée</h3>
-              <p>Semi-rigides, day cruisers, vedettes et yachts, avec ou sans skipper.</p>
-            </div>
-          </article>
-          <article class="ucard" data-reveal data-reveal-delay="2">
-            <div class="ucard__media"><img src="assets/images/chantier-entretien.jpg" alt="Entretien d'une coque au chantier naval" loading="lazy" /></div>
-            <div class="ucard__body">
-              <span class="mono ucard__tag">Chantier naval</span>
-              <h3>Entretien &amp; refit</h3>
-              <p>Réparation, mécanique, refit et hivernage, dans les règles de l'art.</p>
-            </div>
-          </article>
-          <article class="ucard ucard--wide ucard--flip" data-reveal>
-            <div class="ucard__media"><img src="assets/images/wake.jpg" alt="Sillage d'un bateau devant les montagnes corses" loading="lazy" /></div>
-            <div class="ucard__body">
-              <span class="mono ucard__tag">Marina &amp; événements</span>
-              <h3>Un port d'attache</h3>
-              <p>Une marina privée pour votre bateau, et des rendez-vous d'exception : couchers de soleil en mer, soirées feux d'artifice, expositions-ventes.</p>
-            </div>
-          </article>
+        <div class="histoire__text">
+          <p class="eyebrow" data-reveal>Notre histoire</p>
+          <h2 class="h-display" data-reveal>Trois générations,<br />une même passion.</h2>
+          <p class="lead" data-reveal>
+            L'histoire de Marine Group commence en 1960, lorsque Julien Raffin fonde une
+            base de location sur le vieux port de Porto-Vecchio. Une passion transmise, depuis,
+            de génération en génération.
+          </p>
+          <ol class="timeline" data-reveal>
+            <li><span class="mono">1960</span> Julien Raffin ouvre sa base de location sur le vieux port.</li>
+            <li><span class="mono">1967</span> Naissance du chantier naval — entretien, réparation, vente.</li>
+            <li><span class="mono">1976</span> Éric Raffin reprend le département location.</li>
+            <li><span class="mono">1989</span> Dimension internationale : import de Mako, Pursuit, Abbate, Apreamare &amp; Marlin.</li>
+            <li><span class="mono">Aujourd'hui</span> Julien &amp; Ghjovan Raffin perpétuent l'héritage familial.</li>
+          </ol>
         </div>
       </div>
     </section>
 
-    <!-- ======= TRANSITION : LA PLONGÉE ======= -->
-    <div class="dive" aria-hidden="true"></div>
-
-    <!-- ============ FLOTTE ============ -->
-    <section class="flotte section section--deep" id="flotte">
+    <!-- ============ VENTE ============ -->
+    <section class="vente section section--deep" id="vente">
       <div class="wrap">
-        <header class="section-head section-head--center">
-          <p class="eyebrow eyebrow--light" data-reveal>La flotte</p>
-          <h2 class="h-display h-display--light" data-reveal>Une flotte d'exception,<br />de 5 à 24 mètres.</h2>
-          <p class="lead lead--light" data-reveal>
-            Quatre familles de bateaux pour explorer les criques de Corse et de Sardaigne,
-            de l'escapade à la journée à la grande croisière.
+        <header class="section-head" data-reveal>
+          <p class="eyebrow eyebrow--light">Vente — neuf &amp; occasion</p>
+          <h2 class="h-display h-display--light">Devenez propriétaire.</h2>
+          <p class="lead lead--light">
+            Concessionnaire officiel des chantiers Marlin, Rand, Protagon et Selva, motorisés
+            par Suzuki et Mercury. Neuf, occasion et bateaux refaits à neuf par nos ateliers.
           </p>
         </header>
-        <div class="fleet">
-          <article class="fleet__item" data-reveal>
-            <div class="fleet__media"><img src="assets/images/fleet-green.jpg" alt="Semi-rigide vu du dessus sur une eau cristalline" loading="lazy" /></div>
-            <div class="fleet__info">
-              <h3>Semi-rigides</h3>
-              <span class="mono">5 – 12 m · agiles</span>
-            </div>
+        <div class="brands">
+          <article class="brand" data-reveal>
+            <h3>Marlin</h3>
+            <p class="mono">Semi-rigides italiens · 7 → 12 m</p>
+            <p class="brand__from">à partir de <strong>110 093 €</strong></p>
           </article>
-          <article class="fleet__item" data-reveal data-reveal-delay="1">
-            <div class="fleet__media"><img src="assets/images/fleet-teak.jpg" alt="Day cruiser au pont en teck vu du ciel" loading="lazy" /></div>
-            <div class="fleet__info">
-              <h3>Day cruisers</h3>
-              <span class="mono">Confort · pont en teck</span>
-            </div>
+          <article class="brand" data-reveal data-reveal-delay="1">
+            <h3>Rand</h3>
+            <p class="mono">Day boats scandinaves · 6 → 13 m</p>
+            <p class="brand__from">à partir de <strong>83 880 €</strong></p>
           </article>
-          <article class="fleet__item" data-reveal data-reveal-delay="2">
-            <div class="fleet__media"><img src="assets/images/yacht-princess.jpg" alt="Vedette de sport amarrée sur une eau turquoise" loading="lazy" /></div>
-            <div class="fleet__info">
-              <h3>Vedettes</h3>
-              <span class="mono">Cabine · week-end</span>
-            </div>
+          <article class="brand" data-reveal data-reveal-delay="2">
+            <h3>Protagon</h3>
+            <p class="mono">Center console · 6 → 11 m</p>
+            <p class="brand__from">à partir de <strong>46 960 €</strong></p>
           </article>
-          <article class="fleet__item" data-reveal data-reveal-delay="3">
-            <div class="fleet__media"><img src="assets/images/yacht-mangusta.jpg" alt="Yacht à moteur au mouillage dans le golfe" loading="lazy" /></div>
-            <div class="fleet__info">
-              <h3>Yachts</h3>
-              <span class="mono">jusqu'à 24 m</span>
-            </div>
+          <article class="brand" data-reveal data-reveal-delay="3">
+            <h3>Selva</h3>
+            <p class="mono">Open &amp; FishMaster · 5 → 7 m</p>
+            <p class="brand__from">à partir de <strong>21 240 €</strong></p>
           </article>
         </div>
-        <div class="flotte__cta" data-reveal>
-          <a class="btn btn--solid" href="tel:+33632866788">Réserver un bateau</a>
+        <div class="vente__cta" data-reveal>
+          <a class="btn btn--solid" href="#contact">Demander un devis</a>
+          <a class="link-arrow link-arrow--light" href="tel:+33632866788">Voir toute la gamme au 06 32 86 67 88</a>
         </div>
       </div>
     </section>
@@ -217,19 +296,23 @@
     <section class="chantier section section--deeper" id="chantier">
       <div class="wrap chantier__grid">
         <div class="chantier__text">
-          <p class="eyebrow eyebrow--light" data-reveal>Le chantier</p>
-          <h2 class="h-display h-display--light" data-reveal>Un savoir-faire qui prend soin<br />de chaque coque.</h2>
+          <p class="eyebrow eyebrow--light" data-reveal>Le chantier naval</p>
+          <h2 class="h-display h-display--light" data-reveal>Nous prenons soin<br />de chaque coque.</h2>
           <p class="lead lead--light" data-reveal>
-            Notre chantier naval réunit sous un même toit tout ce dont votre bateau a besoin
-            pour durer. Point de service agréé <strong>Absolut Yacht</strong>.
+            Depuis 1967, notre chantier réunit sous un même toit tout ce dont votre bateau a
+            besoin pour durer. Point de service agréé <strong>Absolut Yacht</strong>.
           </p>
           <ul class="services-list" data-reveal>
             <li>Entretien &amp; mécanique</li>
             <li>Réparation &amp; carrosserie nautique</li>
-            <li>Refit &amp; rénovation</li>
+            <li>Refit &amp; rénovation complète</li>
             <li>Hivernage &amp; stockage sécurisé</li>
-            <li>Gestion &amp; conciergerie</li>
           </ul>
+          <div class="engagements" data-reveal>
+            <div><span class="mono">01</span><strong>Savoir-faire</strong><p>Des décennies d'expérience, à chaque intervention.</p></div>
+            <div><span class="mono">02</span><strong>Passion</strong><p>Le nautisme au cœur de tout ce que nous entreprenons.</p></div>
+            <div><span class="mono">03</span><strong>Satisfaction</strong><p>Un service personnalisé, du devis à la mise à l'eau.</p></div>
+          </div>
         </div>
         <div class="chantier__gallery">
           <figure data-reveal><img src="assets/images/chantier-stockage.jpg" alt="Stockage sécurisé des bateaux" loading="lazy" /></figure>
@@ -238,23 +321,57 @@
       </div>
     </section>
 
-    <!-- ============ PORTO-VECCHIO ============ -->
-    <section class="lieu section section--deeper" id="lieu">
-      <div class="wrap lieu__grid">
-        <figure class="lieu__figure" data-reveal>
-          <img src="assets/images/porto-vecchio.jpg" alt="Bateau au mouillage devant la côte de Porto-Vecchio" loading="lazy" />
+    <!-- ============ MARINA & SERVICES ============ -->
+    <section class="marina section section--deeper" id="marina">
+      <div class="wrap marina__grid">
+        <figure class="marina__figure" data-reveal>
+          <img src="assets/images/place.jpg" alt="Le golfe de Porto-Vecchio depuis la mer" loading="lazy" />
         </figure>
-        <div class="lieu__text">
-          <p class="eyebrow eyebrow--light" data-reveal>Le territoire</p>
-          <h2 class="h-display h-display--light" data-reveal>Le golfe de Porto-Vecchio<br />pour terrain de jeu.</h2>
+        <div class="marina__text">
+          <p class="eyebrow eyebrow--light" data-reveal>Marina privée &amp; services</p>
+          <h2 class="h-display h-display--light" data-reveal>Un port d'attache,<br />rien que pour vous.</h2>
           <p class="lead lead--light" data-reveal>
-            Des eaux transparentes de Palombaggia aux îles Lavezzi, jusqu'aux plages de Sardaigne :
-            notre quai est le point de départ des plus belles navigations du Sud.
+            Notre marina privée, à deux pas du centre de Porto-Vecchio, offre des places de
+            5 à 30 mètres — sécurisée, eau, électricité, parking privé et accès direct au
+            golfe par chenal privé.
           </p>
-          <a class="link-arrow" href="https://maps.app.goo.gl/4hxsM6KsoLKqjuod9" target="_blank" rel="noopener" data-reveal>
-            <span class="mono">41.5912° N, 9.2795° E</span>
-            Voir sur la carte
-          </a>
+          <dl class="services-two" data-reveal>
+            <div>
+              <dt>Gestion locative</dt>
+              <dd>Confiez-nous votre bateau : recherche de locataires, entretien, gestion commerciale — profitez sans les contraintes.</dd>
+            </div>
+            <div>
+              <dt>Conciergerie</dt>
+              <dd>Skipper, avitaillement, transferts et sorties sur mesure dans tout le Sud de la Corse.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ÉVÉNEMENTS / ACTUALITÉS ============ -->
+    <section class="events section" id="evenements">
+      <div class="wrap">
+        <header class="section-head section-head--center" data-reveal>
+          <p class="eyebrow">Actualités</p>
+          <h2 class="h-display">Rendez-vous &amp; temps forts.</h2>
+        </header>
+        <div class="events__grid">
+          <article class="event" data-reveal>
+            <span class="mono">Salon</span>
+            <h3>Yachting Festival de Cannes</h3>
+            <p>Retrouvez-nous chaque année sur les stands Selva &amp; Marlin, pour découvrir les nouveautés de la flotte.</p>
+          </article>
+          <article class="event" data-reveal data-reveal-delay="1">
+            <span class="mono">En mer</span>
+            <h3>Couchers de soleil &amp; feux d'artifice</h3>
+            <p>Sorties privées au coucher du soleil et soirées feux d'artifice dans le golfe, sur réservation.</p>
+          </article>
+          <article class="event" data-reveal data-reveal-delay="2">
+            <span class="mono">Offres</span>
+            <h3>Expositions-ventes &amp; promotions moteurs</h3>
+            <p>Motorisations du 6 au 350 CV et bateaux d'exposition à prix privilégié. Demandez votre devis.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -273,40 +390,77 @@
         </div>
       </div>
     </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact section section--abyss" id="contact">
+      <div class="wrap contact__grid">
+        <div class="contact__lead">
+          <p class="eyebrow eyebrow--light" data-reveal>Contact &amp; réservations</p>
+          <h2 class="h-display h-display--light" data-reveal>Prenons le large<br />ensemble.</h2>
+          <div class="contact__details" data-reveal>
+            <div>
+              <span class="mono">Le quai</span>
+              <p>Quai Pascal Paoli — Av. de Bastia<br />20137 Porto-Vecchio, Corse-du-Sud</p>
+              <a class="link-arrow link-arrow--light" href="https://maps.app.goo.gl/4hxsM6KsoLKqjuod9" target="_blank" rel="noopener">Itinéraire</a>
+            </div>
+            <div>
+              <span class="mono">Téléphone</span>
+              <p><a href="tel:+33632866788">+33 6 32 86 67 88</a></p>
+              <span class="mono">Email</span>
+              <p><a href="mailto:marinegroup2a@gmail.com">marinegroup2a@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <form class="form" id="contactForm" data-reveal novalidate>
+          <div class="field">
+            <label for="f-name">Prénom &amp; nom</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field field--2">
+            <div>
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div>
+              <label for="f-phone">Téléphone</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-subject">Sujet</label>
+            <select id="f-subject" name="subject">
+              <option>Location d'un bateau</option>
+              <option>Achat / devis</option>
+              <option>Chantier naval &amp; refit</option>
+              <option>Marina privée</option>
+              <option>Autre demande</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" rows="4"></textarea>
+          </div>
+          <button class="btn btn--solid" type="submit">Envoyer la demande</button>
+          <p class="form__note mono">Ce formulaire ouvre votre messagerie. Pour une réponse immédiate, appelez-nous.</p>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <!-- ============ CONTACT / FOOTER ============ -->
-  <footer class="footer section--abyss" id="contact">
-    <div class="wrap footer__grid">
-      <div class="footer__lead">
-        <p class="eyebrow eyebrow--light" data-reveal>Prendre le large</p>
-        <h2 class="h-display h-display--light" data-reveal>Parlons de votre<br />prochaine navigation.</h2>
-        <a class="btn btn--solid" href="tel:+33632866788" data-reveal>Appeler Marine Group</a>
-      </div>
-      <div class="footer__cols">
-        <div class="footer__col">
-          <h3 class="mono">Le quai</h3>
-          <p>Quai Pascal Paoli<br />20137 Porto-Vecchio<br />Corse-du-Sud</p>
-        </div>
-        <div class="footer__col">
-          <h3 class="mono">Contact</h3>
-          <p>
-            <a href="tel:+33632866788">+33 6 32 86 67 88</a><br />
-            <a href="mailto:marinegroup2a@gmail.com">marinegroup2a@gmail.com</a>
-          </p>
-        </div>
-        <div class="footer__col">
-          <h3 class="mono">Suivre</h3>
-          <p>
-            <a href="https://www.instagram.com/marinegroup.portovecchio/" target="_blank" rel="noopener">Instagram</a><br />
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
-          </p>
-        </div>
-      </div>
-    </div>
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer section--abyss">
     <div class="wrap footer__bottom">
       <img src="assets/images/logo.png" alt="Marine Group" class="footer__logo" />
-      <p class="mono">© <span id="year"></span> Marine Group · Porto-Vecchio — Vente · Location · Chantier naval · Marina privée</p>
+      <nav class="footer__links" aria-label="Liens de bas de page">
+        <a href="#flotte">Location</a>
+        <a href="#vente">Vente</a>
+        <a href="#chantier">Chantier naval</a>
+        <a href="#marina">Marina privée</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Confidentialité</a>
+      </nav>
+      <p class="mono footer__copy">© <span id="year"></span> Marine Group · Porto-Vecchio</p>
     </div>
   </footer>
 
