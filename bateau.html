@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marine Group — Fiche bateau</title>
+  <meta name="description" content="Fiche détaillée : caractéristiques, équipement, tarifs et galerie photo. Location & vente de bateaux d'exception à Porto-Vecchio." />
+  <meta name="theme-color" content="#08252B" />
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-boat">
+  <a class="skip-link" href="#boatMain">Aller au contenu</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav is-scrolled" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html" aria-label="Marine Group — accueil">
+        <img src="assets/images/logo.png" alt="Marine Group" class="nav__logo" />
+      </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="index.html#flotte">La flotte</a>
+        <a href="index.html#histoire">Histoire</a>
+        <a href="index.html#vente">Vente</a>
+        <a href="index.html#chantier">Chantier naval</a>
+        <a href="index.html#marina">Marina</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="nav__cta" href="tel:+33632866788">
+        <span class="nav__cta-label">Réservations</span>
+        <span class="nav__cta-num">06 32 86 67 88</span>
+      </a>
+      <button class="nav__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="index.html#flotte">La flotte</a>
+      <a href="index.html#histoire">Histoire</a>
+      <a href="index.html#vente">Vente</a>
+      <a href="index.html#chantier">Chantier naval</a>
+      <a href="index.html#marina">Marina privée</a>
+      <a href="index.html#evenements">Actualités</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="mobile-menu__tel" href="tel:+33632866788">06 32 86 67 88</a>
+    </div>
+  </header>
+
+  <main id="boatMain" class="boat-detail">
+    <div class="wrap">
+      <nav class="crumbs mono" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span aria-hidden="true">/</span>
+        <a id="crumbSection" href="index.html#flotte">La flotte</a>
+        <span aria-hidden="true">/</span>
+        <span id="crumbName" aria-current="page">…</span>
+      </nav>
+
+      <div class="bd-top">
+        <!-- Gallery -->
+        <div class="bd-gallery">
+          <figure class="bd-gallery__main">
+            <img id="bdMain" src="" alt="" />
+            <span id="bdSold" class="bd-sold" hidden>Vendu</span>
+          </figure>
+          <div class="bd-thumbs" id="bdThumbs" role="list"></div>
+        </div>
+
+        <!-- Info panel -->
+        <aside class="bd-info">
+          <p class="eyebrow" id="bdEyebrow" data-reveal>Bateau</p>
+          <h1 class="bd-title" id="bdTitle" data-reveal>…</h1>
+          <p class="bd-color mono" id="bdColor" hidden></p>
+          <p class="bd-blurb" id="bdBlurb" data-reveal></p>
+
+          <ul class="bd-keyspecs" id="bdKeySpecs" data-reveal></ul>
+
+          <div class="bd-price" id="bdPrice" data-reveal></div>
+
+          <div class="bd-actions" data-reveal>
+            <a class="btn btn--solid" id="bdMail" href="#">Demander une offre</a>
+            <a class="btn btn--ghost" href="tel:+33632866788">06 32 86 67 88</a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Full spec + equipment -->
+      <div class="bd-details">
+        <section class="bd-block" id="bdSpecsBlock" hidden>
+          <h2 class="bd-h">Caractéristiques</h2>
+          <dl class="bd-specgrid" id="bdSpecGrid"></dl>
+        </section>
+
+        <section class="bd-block" id="bdSeasonsBlock" hidden>
+          <h2 class="bd-h">Tarifs saisonniers</h2>
+          <div class="bd-seasons" id="bdSeasons"></div>
+          <p class="bd-offers mono" id="bdOffers"></p>
+        </section>
+
+        <section class="bd-block" id="bdEquipBlock" hidden>
+          <h2 class="bd-h" id="bdEquipTitle">Équipement de série</h2>
+          <ul class="bd-equip" id="bdEquip"></ul>
+        </section>
+
+        <section class="bd-block" id="bdOptionsBlock" hidden>
+          <h2 class="bd-h">Options</h2>
+          <ul class="bd-equip bd-equip--options" id="bdOptions"></ul>
+        </section>
+      </div>
+
+      <div class="bd-foot">
+        <a class="link-arrow" id="bdBackLink" href="index.html#flotte">Retour à la flotte</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer section--abyss">
+    <div class="wrap footer__bottom">
+      <img src="assets/images/logo.png" alt="Marine Group" class="footer__logo" />
+      <nav class="footer__links" aria-label="Liens de bas de page">
+        <a href="index.html#flotte">Location</a>
+        <a href="index.html#vente">Vente</a>
+        <a href="index.html#chantier">Chantier naval</a>
+        <a href="index.html#marina">Marina privée</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Confidentialité</a>
+      </nav>
+      <p class="mono footer__copy">© <span id="year"></span> Marine Group · Porto-Vecchio</p>
+    </div>
+  </footer>
+
+  <script src="boats-data.js"></script>
+  <script src="boat.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
