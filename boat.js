@@ -22,6 +22,8 @@
     return e;
   }
 
+  var ROOT = "../"; // detail page lives at /bateau/ — resolve site assets from the root
+
   var params = new URLSearchParams(location.search);
   var id = params.get("id");
   var data = window.MG_BOATS || {};
@@ -36,7 +38,7 @@
         '<h1 class="bd-title">Ce bateau n\u2019est plus disponible.</h1>' +
         '<p class="bd-blurb" style="margin:0 auto 2rem">La fiche demand\u00e9e est introuvable. ' +
         'Retrouvez l\u2019ensemble de nos bateaux sur la page d\u2019accueil.</p>' +
-        '<a class="btn btn--solid" href="index.html#flotte">Voir toute la flotte</a></div>';
+        '<a class="btn btn--solid" href="' + ROOT + '#flotte">Voir toute la flotte</a></div>';
     }
     return;
   }
@@ -56,11 +58,11 @@
   /* ---- Breadcrumb ---- */
   var sec = $("crumbSection"), back = $("bdBackLink");
   if (isRent) {
-    sec.textContent = "La flotte"; sec.href = "index.html#flotte";
-    back.href = "index.html#flotte"; back.textContent = "Retour \u00e0 la flotte";
+    sec.textContent = "La flotte"; sec.href = ROOT + "#flotte";
+    back.href = ROOT + "#flotte"; back.textContent = "Retour \u00e0 la flotte";
   } else {
-    sec.textContent = "Vente"; sec.href = "index.html#vente";
-    back.href = "index.html#vente"; back.textContent = "Retour \u00e0 la vente";
+    sec.textContent = "Vente"; sec.href = ROOT + "#vente";
+    back.href = ROOT + "#vente"; back.textContent = "Retour \u00e0 la vente";
   }
   $("crumbName").textContent = display;
 
@@ -69,7 +71,8 @@
     var gEl = document.querySelector(".bd-gallery");
     if (gEl) gEl.classList.add("bd-gallery--product");
   }
-  var gallery = (b.gallery && b.gallery.length) ? b.gallery : ["assets/images/hero.jpg"];
+  var gallery = ((b.gallery && b.gallery.length) ? b.gallery : ["assets/images/hero.jpg"])
+    .map(function (s) { return ROOT + s; });
   var mainImg = $("bdMain");
   mainImg.src = gallery[0];
   mainImg.alt = b.name;

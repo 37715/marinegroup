@@ -76,19 +76,25 @@
   }
 
   /* ---- Filter tabs (scoped per section: fleet & sales are independent) ---- */
+  const applyFilter = (scope, cat) => {
+    scope.querySelectorAll(".filter").forEach((f) => {
+      const active = f.dataset.filter === cat;
+      f.classList.toggle("is-active", active);
+      f.setAttribute("aria-selected", String(active));
+    });
+    scope.querySelectorAll(".boat").forEach((b) => {
+      b.classList.toggle("is-hidden", cat !== "all" && b.dataset.cat !== cat);
+    });
+  };
   document.querySelectorAll(".filter").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const scope = btn.closest("section") || document;
-      const cat = btn.dataset.filter;
-      scope.querySelectorAll(".filter").forEach((f) => {
-        const active = f === btn;
-        f.classList.toggle("is-active", active);
-        f.setAttribute("aria-selected", String(active));
-      });
-      scope.querySelectorAll(".boat").forEach((b) => {
-        b.classList.toggle("is-hidden", cat !== "all" && b.dataset.cat !== cat);
-      });
+      applyFilter(btn.closest("section") || document, btn.dataset.filter);
     });
+  });
+  // Apply each group's default (active) filter on load
+  document.querySelectorAll(".filters").forEach((group) => {
+    const active = group.querySelector(".filter.is-active") || group.querySelector(".filter");
+    if (active) applyFilter(group.closest("section") || document, active.dataset.filter);
   });
 
   /* ---- Contact form: open the visitor's mail client (no backend) ---- */

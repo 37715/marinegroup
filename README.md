@@ -13,20 +13,31 @@ is the only warm accent; turquoise is reserved for the water, never the UI.
 Plain, dependency-free **static site** — HTML, CSS and a little vanilla JavaScript.
 Fast, hosts anywhere (Netlify, Vercel, GitHub Pages, OVH, any web server), nothing to build.
 
+Clean, **extensionless URLs** everywhere: each page is a directory with an `index.html`
+(`/bateau/`, `/mentions-legales/`, …), so `/bateau?id=marlin274` etc. resolve on any
+static host with no server config or `.html` in sight.
+
 ```
-index.html                     → single-page site: hero, fleet, history, sales, shipyard, marina, events, contact
-mentions-legales.html          → legal notice
-politique-confidentialite.html → privacy policy (RGPD)
-styles.css                     → design system, layout, responsive rules
-main.js                        → nav state, mobile menu, scroll reveals, fleet filter, contact form
-assets/images/                 → optimized photography (+ assets/images/fleet/ per-model shots)
+index.html                       → single-page site: hero, fleet, history, sales, shipyard, marina, events, contact
+bateau/index.html                → boat detail template (rendered from ?id= via boat.js + boats-data.js)
+mentions-legales/index.html      → legal notice            (/mentions-legales)
+politique-confidentialite/       → privacy policy (RGPD)   (/politique-confidentialite)
+boats-data.js                    → generated data for all 54 boats (specs, pricing, gallery, colour)
+boat.js                          → renders the detail page from boats-data.js
+styles.css                       → design system, layout, responsive rules
+main.js                          → nav state, mobile menu, scroll reveals, fleet/sales filters, contact form
+assets/images/                   → optimized photography (fleet/ + sales/ cards, boats/<id>/ galleries)
 ```
 
-## The fleet
+## The fleet & boat pages
 
 The rental fleet is the centrepiece, near the top of the page, with a category filter
-(Semi-rigides / Day cruisers / Vedettes / Yachts). Each boat has its own photo, specs
-(length · guests · power) and day rate, mirroring the real listings on marinegroup.fr.
+(Yachts / Vedettes / Day cruisers / Semi-rigides — Yachts shown by default). Each boat
+links to its own detail page at `/bateau?id=<id>` with a photo gallery, full spec sheet,
+colour, equipment and pricing, mirroring the real listings on marinegroup.fr.
+
+> Note: because pages live in directories, browse the site through a local server (below)
+> rather than opening files directly, so the clean URLs resolve.
 
 ## Run locally
 
@@ -37,7 +48,8 @@ python -m http.server 8000
 # then open http://localhost:8000
 ```
 
-Or just open `index.html` in a browser.
+The home page opens directly in a browser too, but use the local server to follow the
+clean `/bateau?id=…` links between pages.
 
 ## Design system
 
